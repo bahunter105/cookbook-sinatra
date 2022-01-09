@@ -4,6 +4,11 @@
   <% @imported_recipes.each do |recipe| %>
     <li>
       <%= recipe.name %>: <%= recipe.description  %>
+      <form method="Post" action="/">
+         <input type="hidden" name="name" value="<%= recipe.name %>" />
+         <input type="hidden" name="description" value="<%= recipe.description %>" />
+        <button type="submit" class="btn btn-default">Add!</button>
+      </form>
     </li>
   <% end %>
 </ol>
