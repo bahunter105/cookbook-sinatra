@@ -8,9 +8,17 @@ set :bind, '0.0.0.0'
 #   BetterErrors.application_root = File.expand_path('..', __FILE__)
 # end
 
-get '/' do
-  csv_file = File.join(__dir__, 'recipes.csv')
-  @cookbook = Cookbook.new(csv_file)
+csv_file = File.join(__dir__, 'recipes.csv')
+cookbook = Cookbook.new(csv_file)
 
+get '/' do
+  @cookbook = cookbook
   erb :index
+end
+
+get '/cookbook/:index_no' do
+  @cookbook=cookbook
+  recipe_index = params['index_no'].to_i
+  @recipe = @cookbook.all[recipe_index]
+  erb :show
 end
