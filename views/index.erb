@@ -1,4 +1,4 @@
-<h1>My Cookbook</h1>
+<h1>Hunter's Cookbook</h1>
 
 <ol>
   <% @cookbook.all.each do |recipe| %>
@@ -11,6 +11,7 @@
 </ol>
 
 <div class="newRecipeForm">
+<h2>Add a new recipe</h2>
   <form method="Post" action="/">
     <div class="form-group">
       <label for="recipeNameInput">Recipe Name</label>
@@ -20,11 +21,11 @@
       <label for="recipeDescriptionInput">Description</label>
       <textarea class="form-control" name="description" rows="3" placeholder="Make me sound tasty!"></textarea>
     </div>
-    <div class="form-group">
+    <%# <div class="form-group">
       <label for="exampleInputFile">File input</label>
       <input type="file" id="exampleInputFile">
       <p class="help-block">Example block-level help text here.</p>
-    </div>
+    </div> %>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
 </div>
