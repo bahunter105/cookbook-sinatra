@@ -3,7 +3,9 @@
 <ol>
   <% @cookbook.all.each do |recipe| %>
     <li>
-      <%= recipe.name %>: <%= recipe.description  %>
+      <a href= <%= "/cookbook/#{@cookbook.all.index(recipe)}" %> >
+        <%= recipe.name %>: <%= recipe.description  %>
+      </a>
     </li>
   <% end %>
 </ol>
