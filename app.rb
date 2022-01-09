@@ -34,3 +34,22 @@ post '/' do
   @cookbook.save_csv
   erb :index
 end
+
+post '/delete/:index_no' do
+  @cookbook = cookbook
+  # pry
+  recipe_index = params['index_no'].to_i
+  # recipe = @cookbook.all[recipe_index]
+  # recipe
+  @cookbook.remove_recipe(recipe_index)
+  @cookbook.save_csv
+  erb :index
+end
+
+post '/import' do
+  @cookbook = cookbook
+  # pry
+  ingredient = params[:name]
+  @imported_recipes = @cookbook.import_recipes(ingredient)
+  erb :import
+end

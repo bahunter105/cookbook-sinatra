@@ -1,6 +1,6 @@
 require 'csv'
 require 'open-uri'
-# require 'nokogiri'  << not working with sinatra
+require 'nokogiri'
 require_relative 'recipe'
 
 class Cookbook

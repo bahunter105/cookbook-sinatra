@@ -1,0 +1,9 @@
+<h1>Add a recipe to your cookbook!</h1>
+
+<ol>
+  <% @imported_recipes.each do |recipe| %>
+    <li>
+      <%= recipe.name %>: <%= recipe.description  %>
+    </li>
+  <% end %>
+</ol>
