@@ -9,3 +9,21 @@
     </li>
   <% end %>
 </ol>
+
+
+<form method="Post" action="/">
+  <div class="form-group">
+    <label for="recipeNameInput">Recipe Name</label>
+    <input type="text" name="name" class="form-control" placeholder="Give me a name!">
+  </div>
+  <div class="form-group">
+    <label for="recipeDescriptionInput">Description</label>
+    <textarea class="form-control" name="description" rows="3" placeholder="Make me sound tasty!"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
